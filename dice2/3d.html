@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="3d.css">
+    <title>3dDice</title>
+    <script src="3dDice.js"></script> 
+
+    
+
+</head>
+<body>
+     
+    <div>
+        <h1 id="title">Roll The Dice</h1>        
+    </div>
+
+    <div id="view">
+        
+        <div id="dice" class="diceAll">
+            <div class="diceFace" id="front"></div>
+            <div class="diceFace" id="right"></div>
+            <div class="diceFace" id="back"></div>
+            <div class="diceFace" id="left"></div>
+            <div class="diceFace" id="top"></div>
+            <div class="diceFace" id="bottom"></div>
+        </div>
+
+        <button type="button" class="rollButton" onClick="rollTheDice()">Roll the Dice</button>
+
+    </div>
+
+    <div id ="table">
+        <table>
+          <tr>
+            <th>Attempt</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td id="value1" ></td>
+            <td id="value2" ></td>
+            <td id="value3" ></td>
+            <td id="value4" ></td>
+            <td id="value5" ></td>
+            <td id="value6" ></td>
+            <td id="value7" ></td>
+            <td id="value8" ></td>
+            <td id="value9" ></td>
+            <td id="value10"></td>
+          </tr>
+          <tr>
+            <td>Total</td>
+            <td id="total1" ></td>
+            <td id="total2" ></td>
+            <td id="total3" ></td>
+            <td id="total4" ></td>
+            <td id="total5" ></td>
+            <td id="total6" ></td>
+            <td id="total7" ></td>
+            <td id="total8" ></td>
+            <td id="total9" ></td>
+            <td id="total10"></td>
+          </tr>
+        </table>
+    </div>
+
+
+</body>
+</html>

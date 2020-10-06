@@ -1,0 +1,185 @@
+body {
+    background-color:#0dd;    
+    margin: auto; 
+	text-align: center; 
+}
+.rollButton {
+    background: #b8a608; 
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 7px; 
+        color: #ffff; 
+		font-size: 30px; 
+		padding: 10px 19px 10px 19px; 
+        text-decoration: none; 
+        float: left;
+        margin-left: auto;
+        margin-top:100px;
+       
+}
+.rollButton:hover { 
+    background: #232931; 
+    text-decoration: none; 
+}
+ h1 { 
+    margin: 30px; 
+    font-family: "Lobster", cursive; 
+    text-shadow: 5px 0 #232931; 
+    font-size: 4rem; 
+    color: rgb(251, 4, 119); 
+    text-align: center; 
+} 
+h2{
+    margin: 10px; 
+    font-family: "Lobster", cursive; 
+    text-shadow: 5px 0 #232931; 
+    font-size: 2.5rem; 
+    color: rgb(251, 4, 119); 
+    text-align: center; 
+}
+
+td, th {
+    border: 2px solid black;
+    text-align: left;
+    padding: 10px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+  #view{
+          
+    height:10px;    
+    float: left;
+    perspective:600px;
+    margin-left: 45%;
+    
+    }
+.dicePos1{ 
+     transform:rotateY(360deg);
+}
+.dicePos2{ 
+    transform:rotateY(-90deg);
+}
+.dicePos3{ 
+    transform:rotateY(180deg);
+}
+.dicePos4{ 
+    transform:rotateY(90deg);
+}
+.dicePos5{ 
+    transform:rotateX(-90deg);
+}
+.dicePos6{ 
+    transform:rotateX(90deg);
+}
+#dice{
+    width:200px;
+    height:200px;
+    position:relative;
+    transform-style:preserve-3d;
+    transition: transform 1s;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    
+    }
+#btnFront:checked ~ #view>#dice{
+    transform:rotateY(360deg) !important;
+    }
+#btnRight:checked ~ #view>#dice{
+    transform:rotateY(-90deg) !important;
+    }
+#btnBack:checked ~ #view>#dice{
+    transform:rotateY(180deg) !important;
+    }
+#btnLeft:checked ~ #view>#dice{
+    transform:rotateY(90deg) !important;
+    }
+#btnTop:checked ~ #view>#dice{
+    transform:rotateX(-90deg) !important;
+    }
+#btnBottom:checked ~ #view>#dice{
+    transform:rotateX(90deg) !important;
+    }
+.diceFace{
+    position:absolute;
+    width:200px;
+    height:200px;
+    text-align:center;
+    line-height:200px;
+    font-size:45px;
+    border:2px solid #a00;
+    }
+ #front{
+    background-image:url("../dice/dicepics/dice\ 1.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateY(0deg) translateZ(100px);
+    }
+#right{
+    background-image:url("../dice/dicepics/dice\ 2.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateY(90deg) translateZ(100px);
+    }
+#back{background-image:url("../dice/dicepics/dice\ 3.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateY(180deg) translateZ(100px);
+    }
+#left{
+    background-image:url("../dice/dicepics/dice\ 4.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateY(-90deg) translateZ(100px);
+    }
+#top{
+    background-image:url("../dice/dicepics/dice\ 5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateX(90deg) translateZ(100px);
+    }
+#bottom{
+    background-image:url("../dice/dicepics/dice\ 6.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transform:rotateX(-90deg) translateZ(100px);
+    }
+span{
+    display:inline-block;
+    padding:4px 10px;
+    margin:3px;
+    background-color:#0aa;
+    border:2px inset #dd0
+    }    
+    
+#test:checked + #test2{
+    display:block;
+    width:80px;
+    background-color:#0aa;
+    }
+input[type="radio"]{
+    transform:scale(2,2);
+    margin:10px;
+    color:red;
+    }
+.diceSpin {
+    animation: rotating 1s linear infinite;
+    }
+ @keyframes rotating {
+    0%  { transform: rotate3d(1, 1, 0, 0deg);}
+    100%{ transform: rotate3d(1, 1, 0, 360deg);}
+      }
+#table {
+    
+    float: left;
+    margin-left: 39%;
+    margin-top:450px;
+}
